@@ -10,7 +10,12 @@ the previous number from the bar address and type a new number.
 from flask import Flask
 from random import randint
 
+# ---------------------------------------- Random Number Generation ----------------------------------------
+
 num = randint(0, 9)
+
+# ---------------------------------------- Create Site with FLASK ----------------------------------------
+
 app = Flask(__name__)
 
 
@@ -32,7 +37,6 @@ def choice(guess):
     else:
             return '<h1>Too High, Try again!</h1><h3>Please delete the current number and register a new number.</h3>' \
                    '<img src="https://media4.giphy.com/media/1wnZSnmrnwJmnJkd1c/giphy.webp?cid=ecf05e471r5n7ganr1a4z4obwlbg9w3700b4z9vtlvr07u0x&rid=giphy.webp&ct=g" width=200px>'
-
 
 
 if __name__ == "__main__":
